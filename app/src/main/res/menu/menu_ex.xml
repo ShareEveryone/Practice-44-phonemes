@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/itemprofile"
+        android:title="Thông tin cá nhân"
+        app:showAsAction="never"/>
+    <item android:id="@+id/itemhistory"
+        android:title="Lịch sử"
+        app:showAsAction="never"/>
+    <item android:id="@+id/itemlogout"
+        android:title="Đăng xuất"
+        app:showAsAction="never"/>
+    <item android:id="@+id/itemsearch"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title=""
+        app:showAsAction="always"/>
+    <item android:id="@+id/itemshare"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title=""
+        app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000CD"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/listdoword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/btnheer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/ic_hearing_black_24dp" />
+            <ImageButton
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="200dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/micro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_border"
+                android:src="@drawable/ic_mic_black_24dp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

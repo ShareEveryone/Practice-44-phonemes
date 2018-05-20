@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:id="@+id/word_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000080">
+    <ImageView
+        android:id="@+id/m1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_mic"
+        android:background="@drawable/circle_border_white"/>
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Luyện âm tiết"
+        android:layout_below="@id/m1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"/>
+    <ImageView
+        android:id="@+id/diem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_below="@id/t1"
+        android:src="@drawable/ic_star_black_24dp"/>
+    <TextView
+        android:id="@+id/totlam"
+        android:layout_below="@+id/diem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tốt lắm"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"/>
+    <Button
+        android:id="@+id/btncontinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#2eb82e"
+        android:text="Tiếp tục"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/totlam"
+        />
+
+
+</RelativeLayout>

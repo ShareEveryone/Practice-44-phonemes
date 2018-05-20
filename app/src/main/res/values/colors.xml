@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#000</color>
+    <color name="blue">#251be1</color>
+    <color name="red">#ff0000</color>
+    <color name="bkg_custom">#0000CD</color>
+    <color name="bnt_custom">#00fbff</color>
+    <color name="white">#FFF</color>
+    <color name="green">#0c890c</color>
+    <color name="gray">#c2c2c2</color>
+    <color name="tabhost">#ff6666</color>
+    <color name="bkgtab">#66ff66</color>
+
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1">
+        <TextView
+            android:id="@+id/text1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Nguyên âm: "
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textnguyenam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/text1"
+            android:layout_marginRight="-80dp"
+            android:layout_marginTop="16dp"
+            android:text="/ʌ/"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/playaudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_volume_up_black_24dp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tex2"
+        android:layout_below="@id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/red"
+        android:paddingBottom="5px"
+        android:text="Xem hướng dẫn:"/>
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_marginTop="5px"
+        android:layout_below="@id/tex2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="330dp"
+        android:background="@drawable/custom_background"
+        android:scrollbars="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/r11"
+            android:layout_weight="6"
+            android:layout_width="match_parent"
+            android:layout_height="330px">
+            <VideoView
+                android:layout_weight="2"
+                android:id="@+id/video"
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="320px"
+                android:layout_gravity="center" />
+               <!-- <Button
+                    android:textAllCaps="false"
+                    android:text="play"
+                    android:textSize="0dp"
+                    android:id="@+id/btnplay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_play_arrow_black_24dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"/>-->
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_below="@id/r11"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cách phát âm: "
+            android:textColor="@color/red"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:maxLines = "10"
+            android:scrollbars="vertical"
+            android:id="@+id/textinstruction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/text2"
+            android:text="abc"/>
+    </RelativeLayout>
+
+</RelativeLayout>
