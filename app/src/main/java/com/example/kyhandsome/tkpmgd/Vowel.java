@@ -47,7 +47,7 @@ public class Vowel extends AppCompatActivity {
         mNames.add("/ e /");
 
         mImageUrls.add("https://i.redd.it/qn7f9oqu7o501.jpg");
-        mNames.add("/ ɔ /");
+        mNames.add("/ a /");
 
         mImageUrls.add("https://i.redd.it/j6myfqglup501.jpg");
         mNames.add("/ ʊ /");

@@ -13,5 +13,6 @@
     <color name="gray">#c2c2c2</color>
     <color name="tabhost">#ff6666</color>
     <color name="bkgtab">#66ff66</color>
+    <color name="bkg">#ffe366</color>
 
 </resources>

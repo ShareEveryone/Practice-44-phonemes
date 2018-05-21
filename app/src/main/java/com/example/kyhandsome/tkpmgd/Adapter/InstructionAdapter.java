@@ -1,7 +1,10 @@
 package com.example.kyhandsome.tkpmgd.Adapter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -12,6 +15,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +29,15 @@ import android.widget.VideoView;
 import com.example.kyhandsome.tkpmgd.Model.Sound;
 import com.example.kyhandsome.tkpmgd.R;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class InstructionAdapter extends BaseAdapter {
@@ -127,6 +137,49 @@ public class InstructionAdapter extends BaseAdapter {
 
                     holder.videoView.start();
 
+            }
+
+        });
+
+        holder.textInstruction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final AlertDialog.Builder mbuilder = new AlertDialog.Builder(context);
+                final View mview = context.getLayoutInflater().inflate(R.layout.showinstruction,null);
+                final ImageView mimg = mview.findViewById(R.id.showimage);
+                final TextView mtv = mview.findViewById(R.id.showtext);
+
+                Picasso.get().load(sound.imageurl).into(mimg);
+
+                mtv.setText(sound.textinstruction);
+
+
+                mbuilder.setCancelable(true);
+                mbuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                mbuilder.setView(mview);
+                AlertDialog dialog = mbuilder.create();
+                dialog.show();
+
+                /*final Dialog mdialog = new Dialog(context);
+                mdialog.setContentView(R.layout.showinstruction);
+                final ImageView mimg = mdialog.findViewById(R.id.showimage);
+                final TextView mtv = mdialog.findViewById(R.id.showtext);
+                final Button mclose = mdialog.findViewById(R.id.close);
+                mtv.setText(sound.textinstruction);
+
+                mclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mdialog.cancel();
+                    }
+                });
+                mdialog.show();*/
             }
 
         });
